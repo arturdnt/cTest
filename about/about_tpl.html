@@ -1,0 +1,30 @@
+<div>
+    <div ng-if="editMode === 'true'">
+        <form id='aboutForm'>
+            <div>
+                <label for="">Business name</label>
+                <input name="business" type='text' ng-model='data.metaData.title' />
+            </div>
+            <div>
+                <label for="">Description</label>
+                <textarea rows="4" cols="50" ng-model='data.metaData.description'></textarea>
+            </div>
+            <div>
+                <label for="">Website's url</label>
+                <input name="business" type='text' ng-model='data.metaData.url' />
+            </div>
+        </form>
+    </div>
+
+    <div ng-if="editMode === 'false'">
+        <div>
+            <label>{{data.metaData.title}}</label>
+        </div>
+        <div>
+            <pre>{{data.metaData.description}}</pre>
+        </div>
+        <div>
+            <a href="//{{data.url}}">{{data.metaData.url}}</a>
+        </div>
+    </div>
+</div>
