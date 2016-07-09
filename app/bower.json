@@ -1,0 +1,26 @@
+{
+  "name": "appGen",
+  "main": "app.js",
+  "homepage": "https://github.com/arturdnt/",
+  "authors": [
+    "HagaiR"
+  ],
+  "description": "c test",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {
+    "angular-material": "^1.0.9",
+    "angular-resource": "^1.5.7",
+    "angular-ui-router": "ui-router#^0.3.1",
+    "ng-file-upload": "^12.0.4",
+    "angular": "angularjs#^1.5.7",
+    "angular-animate": "^1.5.7",
+    "angular-aria": "^1.5.7",
+    "angular-messages": "^1.5.7"
+  }
+}

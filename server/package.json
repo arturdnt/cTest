@@ -1,0 +1,13 @@
+{
+  "name": "aa",
+  "version": "0.0.1",
+  "description": "aa",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "connect-multiparty": "^2.0.0",
+    "express": "^4.2.0",
+    "get-image-colors": "^1.5.0"
+  }
+}

@@ -1,0 +1,31 @@
+<div class="content-container">
+    <div ng-if="editMode === 'true'">
+        <form id='imagesForm' ng-submit="data.images.getImages()">
+            <div><h2 class=".md-display-2">Get Images</h2></div>
+            <md-input-container>
+                <label for="">pixabay token</label>
+                <input name="business" type='text' ng-model='data.images.token' />
+            </md-input-container><br/>
+            <md-input-container>
+                <label for="">Specify Query</label>
+                <input name="business" type='text' ng-model='data.images.query' />
+            </md-input-container><br/>
+           <md-button class="md-raised md-primary" type="submit">Fetch Images</md-button>
+        </form>
+    </div>
+
+   <div class="live" ng-if="editMode === 'false'">
+        <div class="primary top-bar"></div>
+        <div class="title-bar">
+            <label>{{data.metaData.title || "Sites's title"}}</label>
+        </div>
+       <div class="content-section img-section">
+        <div layout="row" layout-wrap  ng-if='data.images.hits && data.images.hits.length > 0'>
+            <md-card ng-repeat="img in data.images.hits">
+            <img src="{{img.previewURL}}"/>
+                                               </md-card>
+        </div>
+           </div>
+         <div class="secondary bottom-bar"></div>
+    </div>
+</div>

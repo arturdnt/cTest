@@ -1,0 +1,33 @@
+<div class="content-container">
+    <div ng-if="editMode === 'true'">
+        <form id='aboutForm'>
+            <div><h2 class=".md-display-2">General Data</h2></div>
+           <md-input-container>
+                <label for="">Business name</label>
+                <input name="business" type='text' ng-model='data.metaData.title' />
+            </md-input-container>
+            <md-input-container>
+                <label for="">Description</label>
+                <textarea rows="4" cols="50" ng-model='data.metaData.description'></textarea>
+            </md-input-container>
+            <md-input-container>
+                <label for="">Website's url</label>
+                <input name="business" type='text' ng-model='data.metaData.url' />
+            </md-input-container>
+        </form>
+    </div>
+
+    <div class="live" ng-if="editMode === 'false'">
+        <div class="primary top-bar"></div>
+            <div class="title-bar">
+                <label>{{data.metaData.title || "Sites's title"}}</label>
+            </div>
+            <div class="content-section">
+                <pre class="description">{{data.metaData.description}}</pre>
+            </div
+            </div>
+            <div class="footer-bar">
+                <a class="primary" href="//{{data.url}}">{{data.metaData.url}}</a>
+            </div>
+                <div class="secondary bottom-bar"></div>
+</div>
